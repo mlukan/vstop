@@ -114,7 +114,7 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
         weight: 2,
         opacity: 0.8,
         fillOpacity: 0.6
-    }}).bindPopup("{popup_html}", {{minWidth: 600}}).addTo(map);
+    }}).bindPopup("{popup_html}", {{maxWidth: 600, minWidth: 600}}).addTo(map);
     """
 
     # Build polygon GeoJSON layer
