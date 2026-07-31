@@ -1,0 +1,7 @@
+csv_file: inaturalist_2024-07-27_2024-08-02_405_obs_2026-07-31.csv
+geojson_file: vstop_2024.geojson
+date_from: '2024-07-27'
+date_to: '2024-08-02'
+num_records_requested: 10000
+num_records_fetched: 405
+timestamp: '2026-07-31T15:20:29'

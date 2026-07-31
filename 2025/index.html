@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="map"></div>
-    <div id="timestamp">Mapa bola naposledy aktualizovaná 31.07.2026 o 14:36</div>
+    <div id="timestamp">Mapa bola naposledy aktualizovaná 31.07.2026 o 15:21</div>
     <script>
         var map = L.map('map').setView([48.7, 19.1], 9);
 
@@ -39,7 +39,7 @@
         }).addTo(map);
 
         
-    var geoJsonData = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[22.113656, 49.128911], [21.886312, 49.368847], [21.701594, 49.416546], [21.605628, 49.437117], [21.576284, 49.428457], [21.554902, 49.415558], [21.553672, 49.415327], [21.549291, 49.417257], [21.545245, 49.41612], [21.5354, 49.39901], [21.697098, 49.279857], [22.084704, 49.131189], [22.113656, 49.128911]]]}, "properties": {"name": "Study Area of 49. VS TOP 2025", "location": "Laboreck\u00e1 and Ondavsk\u00e1 vrchovina", "central_village": "Medvedie"}}, {"type": "Feature", "properties": {}, "geometry": {"type": "Polygon", "coordinates": [[[21.513107, 49.418861], [21.496528, 49.418861], [21.49418, 49.408824], [21.502781, 49.389876], [21.519777, 49.355463], [21.587485, 49.325978], [21.652266, 49.288401], [21.711376, 49.258298], [21.79523, 49.219854], [21.868634, 49.198806], [21.91267, 49.182312], [21.982763, 49.157493], [22.031697, 49.138289], [22.114129, 49.125278], [22.109474, 49.139341], [22.084554, 49.191932], [22.057293, 49.213354], [22.029834, 49.225817], [22.033046, 49.239728], [22.03485, 49.256419], [22.028378, 49.261441], [22.031325, 49.272872], [22.020952, 49.284488], [22.002321, 49.296293], [21.979069, 49.311661], [21.960099, 49.349047], [21.952581, 49.347629], [21.938491, 49.344094], [21.919162, 49.35118], [21.902299, 49.345506], [21.894003, 49.355463], [21.878989, 49.369919], [21.863942, 49.364828], [21.849657, 49.372111], [21.839685, 49.389876], [21.828227, 49.389127], [21.810552, 49.378725], [21.793974, 49.369919], [21.791268, 49.352605], [21.776071, 49.35618], [21.758295, 49.378725], [21.743974, 49.389876], [21.727819, 49.398156], [21.719709, 49.411129], [21.702853, 49.414212], [21.681194, 49.408824], [21.656813, 49.416533], [21.631969, 49.444122], [21.617103, 49.444122], [21.601827, 49.435348], [21.569812, 49.437731], [21.556654, 49.434555], [21.539269, 49.432972], [21.525868, 49.422755], [21.513107, 49.418861]]]}}]};
+    var geoJsonData = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[21.513107, 49.418861], [21.496528, 49.418861], [21.49418, 49.408824], [21.502781, 49.389876], [21.519777, 49.355463], [21.587485, 49.325978], [21.652266, 49.288401], [21.711376, 49.258298], [21.79523, 49.219854], [21.868634, 49.198806], [21.91267, 49.182312], [21.982763, 49.157493], [22.031697, 49.138289], [22.114129, 49.125278], [22.109474, 49.139341], [22.084554, 49.191932], [22.057293, 49.213354], [22.029834, 49.225817], [22.033046, 49.239728], [22.03485, 49.256419], [22.028378, 49.261441], [22.031325, 49.272872], [22.020952, 49.284488], [22.002321, 49.296293], [21.979069, 49.311661], [21.960099, 49.349047], [21.952581, 49.347629], [21.938491, 49.344094], [21.919162, 49.35118], [21.902299, 49.345506], [21.894003, 49.355463], [21.878989, 49.369919], [21.863942, 49.364828], [21.849657, 49.372111], [21.839685, 49.389876], [21.828227, 49.389127], [21.810552, 49.378725], [21.793974, 49.369919], [21.791268, 49.352605], [21.776071, 49.35618], [21.758295, 49.378725], [21.743974, 49.389876], [21.727819, 49.398156], [21.719709, 49.411129], [21.702853, 49.414212], [21.681194, 49.408824], [21.656813, 49.416533], [21.631969, 49.444122], [21.617103, 49.444122], [21.601827, 49.435348], [21.569812, 49.437731], [21.556654, 49.434555], [21.539269, 49.432972], [21.525868, 49.422755], [21.513107, 49.418861]]]}, "properties": {}}]};
     L.geoJSON(geoJsonData, {
         style: {
             color: 'royalblue',
@@ -50,38 +50,6 @@
     }).addTo(map);
 
         
-    L.circleMarker([49.3794759722, 21.7820509722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604306224/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Arctia caja</b><br>spriadač medvedí<br>2025-08-02<br>ruina strażnicy niemieckiej, Czeremcha, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332922174?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3794759722, 21.7820509722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/546805168/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Arctia caja</b><br>spriadač medvedí<br>2025-08-02<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/303372024?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3794579722, 21.7820609722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604306507/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Euthystira brachyptera</b><br>koník zlatistý<br>2025-08-02<br>ruina strażnicy niemieckiej, Czeremcha, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332922300?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3883742, 21.7772043], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/546808951/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Colias</b><br>žltáčik<br>2025-08-02<br>Jaśliska, Polska<br>👤 Justyna Soska<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/303379006?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
     L.circleMarker([49.4120466667, 21.599455], {
         radius: 6,
         color: 'green',
@@ -89,22 +57,6 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/546485141/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Leccinellum pseudoscabrum</b><br>kozák hrabový<br>2025-08-02<br>Dukla, Vyšná Pisaná, Prešovský kraj, SK<br>👤 Jaroslav Ilek<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/303210685?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3791, 21.7820719722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434918/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Rhagio tringarius</b><br>None<br>2025-08-01<br>ruina strażnicy niemieckiej, Czeremcha, Polska<br>👤 Wojciech Okliński<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/332922701?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3791, 21.7820719722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/545975177/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Rhagio tringarius</b><br>None<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/302934991?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.4063916667, 21.6348966667], {
         radius: 6,
@@ -114,30 +66,6 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/545932045/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Cuscuta epithymum</b><br>kukučina dúšková<br>2025-08-01<br>Medvedie, Medvedie, Prešovský kraj, SK<br>👤 Ludka Reiterova<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302913004?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-    L.circleMarker([49.356673, 21.7832289722], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434925/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Prionus coriarius</b><br>Fuzáč hrubý<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332984962?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3559511997, 21.7786068997], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434936/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Euplagia quadripunctaria</b><br>spriadač kostihojový<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332984968?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3559634, 21.7785310997], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/549071120/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Euplagia quadripunctaria</b><br>spriadač kostihojový<br>2025-08-01<br>Jaśliska, Polska<br>👤 Justyna Soska<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/304309398?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
     L.circleMarker([49.2975915695, 21.7699354851], {
         radius: 6,
         color: 'green',
@@ -145,38 +73,6 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434953/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Rosalia alpina</b><br>fuzáč alpský<br>2025-08-01<br>Slovakia<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332984970?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3814317, 21.7648119], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/549071176/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Monotropa hypopitys</b><br>hniliak smrekový<br>2025-08-01<br>Jaśliska, Polska<br>👤 Justyna Soska<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/304569023?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3868290997, 21.7619264], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/545974397/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Mantis religiosa</b><br>modlivka zelená<br>2025-08-01<br>Krosno, PL-PK, PL<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302934538?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3868287, 21.7619244997], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434961/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Mantis religiosa</b><br>modlivka zelená<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332984979?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.387973, 21.763653], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/548571351/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Ramaria stricta</b><br>strapačka vzpriamená<br>2025-08-01<br>Jaśliska, Polska<br>👤 Justyna Soska<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/304309803?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.4050304801, 21.631510444], {
         radius: 6,
@@ -217,22 +113,6 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/547344500/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Malacolimax tenellus</b><br>slizniak žltý<br>2025-08-01<br>090 01 Vyšná Pisaná, Slovensko<br>👤 Branislav Tej<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/303662621?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3907971, 21.7789751], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/604434978/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Araschnia levana</b><br>babôčka sieťkovaná<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/332984983?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.3907969997, 21.7789749997], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/545974529/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Araschnia levana</b><br>babôčka sieťkovaná<br>2025-08-01<br>Jaśliska, Polska<br>👤 Wojciech Okliński<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302934622?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.3968383333, 21.6223283333], {
         radius: 6,
@@ -329,14 +209,6 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/545447657/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Lacerta agilis</b><br>jašterica krátkohlavá<br>2025-07-31<br>Medvedie, Prešovský kraj, SK<br>👤 Silvi Karin Tkáčová<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302649719?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.4159319997, 21.7020647], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/554557291/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Betonica officinalis</b><br>betonika lekárska<br>2025-07-31<br>Vyšný Komárnik 42, 090 05 Vyšný Komárnik, Slovensko<br>👤 Rew Wil<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/307447207?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.40145065, 21.642167], {
         radius: 6,
@@ -674,6 +546,14 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/547341709/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Bielzia coerulans</b><br>slizniak karpatský<br>2025-07-30<br>090 05 Nižný Komárnik, Slovensko<br>👤 Branislav Tej<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/303661234?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
+    L.circleMarker([49.3972138889, 21.5340472222], {
+        radius: 6,
+        color: 'green',
+        weight: 2,
+        opacity: 0.8,
+        fillOpacity: 0.6
+    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/545252783/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Psophus stridulus</b><br>koník červenokrídly<br>2025-07-30<br>Vápeník 33, 090 02 Vápeník, Slovensko<br>👤 Benjamín Jarčuška<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302543749?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    
     L.circleMarker([49.40145065, 21.642167], {
         radius: 6,
         color: 'green',
@@ -890,6 +770,14 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/544860522/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Lacerta agilis</b><br>jašterica krátkohlavá<br>2025-07-29<br>Krajná Porúbka, Prešovský kraj, SK<br>👤 Silvi Karin Tkáčová<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302332006?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
+    L.circleMarker([49.4423783333, 21.6208666667], {
+        radius: 6,
+        color: 'green',
+        weight: 2,
+        opacity: 0.8,
+        fillOpacity: 0.6
+    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/547340514/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Leccinellum pseudoscabrum</b><br>kozák hrabový<br>2025-07-29<br>090 05 Šarbov, Slovensko<br>👤 Branislav Tej<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/303660702?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    
     L.circleMarker([49.3891833333, 21.6044916667], {
         radius: 6,
         color: 'green',
@@ -1018,22 +906,6 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/544325035/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Rhagonycha fulva</b><br>snehuľčík žltý<br>2025-07-29<br>Medvedie, Prešovský kraj, SK<br>👤 Silvi Karin Tkáčová<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302043459?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-    L.circleMarker([49.4227366667, 21.6530616667], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/547340236/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Lymantria monacha</b><br>Mníška obyčajná<br>2025-07-29<br>090 05 Krajná Porúbka, Slovensko<br>👤 Branislav Tej<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/303660569?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.42263, 21.6529733333], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/547340116/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Helix pomatia</b><br>slimák záhradný<br>2025-07-29<br>090 05 Krajná Porúbka, Slovensko<br>👤 Branislav Tej<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/303660480?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
     L.circleMarker([49.376990019, 21.7169438303], {
         radius: 6,
         color: 'green',
@@ -1097,6 +969,14 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/544061696/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Salamandra salamandra</b><br>salamandra škvrnitá<br>2025-07-28<br>Medvedie, Prešovský kraj, SK<br>👤 Silvi Karin Tkáčová<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301906252?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    
+    L.circleMarker([49.4330300798, 21.6259911284], {
+        radius: 6,
+        color: 'green',
+        weight: 2,
+        opacity: 0.8,
+        fillOpacity: 0.6
+    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543870358/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Erigeron annuus</b><br>hviezdnik ročný<br>2025-07-28<br>Šarbov 11, 090 05 Šarbov, Slovensko<br>👤 Benjamín Jarčuška<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301801670?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.40145065, 21.642167], {
         radius: 6,
@@ -1266,29 +1146,21 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543459792/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Centaurea jacea</b><br>nevädza lúčna<br>2025-07-27<br>Cesta 3543, Medvedie, Prešovský kraj, SK<br>👤 Jaroslav Ilek<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/301584983?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-    L.circleMarker([49.4135166667, 21.69882], {
+    L.circleMarker([49.3448861111, 21.5929666667], {
         radius: 6,
         color: 'green',
         weight: 2,
         opacity: 0.8,
         fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/543291632/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Angelica sylvestris</b><br>angelika lesná<br>2025-07-27<br>Vyšný Komárnik, Vyšný Komárnik, Prešovský kraj, SK<br>👤 Ludka Reiterova<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/301492005?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543311981/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Arion vulgaris</b><br>slizovec iberský<br>2025-07-27<br>Kapišová 39, 090 01 Kapišová, Slovensko<br>👤 Benjamín Jarčuška<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/301504216?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-    L.circleMarker([49.4146786, 21.70112415], {
+    L.circleMarker([49.3547300755, 21.5224743886], {
         radius: 6,
         color: 'green',
         weight: 2,
         opacity: 0.8,
         fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/543877106/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Maianthemum bifolium</b><br>tôňovka dvojllistá<br>2025-07-27<br>Vyšný Komárnik 40, 090 05 Vyšný Komárnik, Slovensko<br>👤 Martina Hajdukova<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301464357?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.4158702052, 21.7017249763], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/544099168/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Fruticicola fruticum</b><br>bucuľka hájová<br>2025-07-27<br>Vyšný Komárnik 42, 090 05 Vyšný Komárnik, Slovensko<br>👤 Vladimir Hemala<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301925364?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543234252/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Astacus astacus</b><br>rak riečny<br>2025-07-27<br>Slovakia<br>👤 Martin Hromada<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301461507?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.3609783333, 21.59313], {
         radius: 6,
@@ -1298,38 +1170,6 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543231735/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Clinopodium vulgare</b><br>jarva obyčajná<br>2025-07-27<br>Kružlová, Prešovský kraj, SK<br>👤 Jaroslav Ilek<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301460110?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-    L.circleMarker([49.4152234794, 21.7007979378], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/544252517/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Anoplotrupes stercorosus</b><br>lajniak hôrny<br>2025-07-27<br>Vyšný Komárnik 42, 090 05 Vyšný Komárnik, Slovensko<br>👤 Vladimir Hemala<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302006023?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.4159589793, 21.7022721469], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/544256958/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Leptophyes albovittata</b><br>kobylka bielopása<br>2025-07-27<br>090 05 Vyšný Komárnik, Slovensko<br>👤 Vladimir Hemala<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302008002?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.4159064128, 21.7019506171], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/544257335/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Coccinella septempunctata</b><br>lienka sedembodková<br>2025-07-27<br>Vyšný Komárnik 42, 090 05 Vyšný Komárnik, Slovensko<br>👤 Vladimir Hemala<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/302008210?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
-    L.circleMarker([49.4156067173, 21.7009662464], {
-        radius: 6,
-        color: 'green',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: 0.6
-    }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/544348004/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Infundibulicybe</b><br>None<br>2025-07-27<br>Vyšný Komárnik 42, 090 05 Vyšný Komárnik, Slovensko<br>👤 Vladimir Hemala<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/302055881?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
-    
     L.circleMarker([49.360900959, 21.5912269335], {
         radius: 6,
         color: 'green',
@@ -1337,6 +1177,14 @@
         opacity: 0.8,
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543219099/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Daucus carota</b><br>mrkva obyčajná<br>2025-07-27<br>Kružlová, Prešovský kraj, SK<br>👤 Jaroslav Ilek<br><strong>Grade: needs_id</strong><br><a href=\"https://www.inaturalist.org/observations/301454002?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
+    
+    L.circleMarker([49.3265874, 21.5930823], {
+        radius: 6,
+        color: 'green',
+        weight: 2,
+        opacity: 0.8,
+        fillOpacity: 0.6
+    }).bindPopup("<img src=\"https://static.inaturalist.org/photos/543212217/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Upupa epops</b><br>dudok chochlatý<br>2025-07-27<br>089 01 Svidník, Slovensko<br>👤 Martin Hromada<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301449991?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
     L.circleMarker([49.4051777778, 21.6361694444], {
         radius: 6,
@@ -1450,7 +1298,7 @@
         fillOpacity: 0.6
     }).bindPopup("<img src=\"https://inaturalist-open-data.s3.amazonaws.com/photos/542667367/small.jpg\" style=\"width:100%;max-width:100%;border-radius:4px;margin-bottom:4px;display:block;\"><br><b>Anguis fragilis</b><br>Slepúch lámavý<br>2025-07-26<br>Medvedie, Medvedie, Prešovský kraj, SK<br>👤 Ludka Reiterova<br><strong>Grade: research</strong><br><a href=\"https://www.inaturalist.org/observations/301140847?locale=sk\" target=\"_blank\">View on iNaturalist</a><br>", {minWidth: 600}).addTo(map);
     
-        map.fitBounds([[49.128911, 21.5354], [49.437117, 22.113656]]);
+        map.fitBounds([[49.125278, 21.49418], [49.444122, 22.114129]]);
     </script>
 </body>
 </html>
