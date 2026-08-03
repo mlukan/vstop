@@ -55,6 +55,42 @@ def _resolve_geojson(value: str) -> Path:
 def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str:
     """Build a Leaflet HTML map with observation markers and an optional polygon."""
 
+    # Summary statistics shown in the legend metadata panel.
+    total_observations = len(df)
+
+    users = (
+        df["user"]
+        if "user" in df.columns
+        else pd.Series(dtype="object")
+    )
+    unique_contributors = users.dropna().astype(str).str.strip()
+    unique_contributors = unique_contributors[
+        (unique_contributors != "")
+        & (unique_contributors.str.lower() != "nan")
+        & (unique_contributors.str.lower() != "none")
+    ].nunique()
+
+    taxa = (
+        df["taxon_name"]
+        if "taxon_name" in df.columns
+        else pd.Series(dtype="object")
+    )
+    unique_taxa = taxa.dropna().astype(str).str.strip()
+    unique_taxa = unique_taxa[
+        (unique_taxa != "")
+        & (unique_taxa.str.lower() != "nan")
+        & (unique_taxa.str.lower() != "none")
+    ].nunique()
+
+    observed_from = ""
+    observed_to = ""
+    if "observed_on" in df.columns and not df.empty:
+        observed = df["observed_on"].dropna().astype(str).str.slice(0, 10)
+        observed = observed[(observed != "") & (observed.str.lower() != "nan")]
+        if not observed.empty:
+            observed_from = observed.min()
+            observed_to = observed.max()
+
     # Calculate bounds for auto-zoom
     if poly is not None:
         bounds = poly.bounds  # (minx, miny, maxx, maxy)
@@ -114,7 +150,7 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
         weight: 2,
         opacity: 0.8,
         fillOpacity: 0.6
-    }}).bindPopup("{popup_html}", {{maxWidth: 600, minWidth: 600}}).addTo(map);
+    }}).bindPopup("{popup_html}", {{maxWidth: 400, minWidth: 400}}).addTo(map);
     """
 
     # Build polygon GeoJSON layer
@@ -151,6 +187,39 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
         .leaflet-popup-content {{ font-size: 13px; line-height: 1.5; }}
         .leaflet-popup-content b {{ font-size: 14px; }}
         .leaflet-popup-content strong {{ color: #333; }}
+        #legend {{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            width: min(320px, calc(100vw - 20px));
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            padding: 10px 12px;
+            color: #2f2f2f;
+            font-size: 13px;
+            line-height: 1.4;
+        }}
+        #legend h3 {{
+            margin: 0 0 6px 0;
+            font-size: 14px;
+            line-height: 1.2;
+        }}
+        .legend-row {{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 2px 0;
+        }}
+        .legend-row span:last-child {{
+            font-weight: 600;
+        }}
+        .legend-separator {{
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin: 8px 0;
+        }}
         #timestamp {{
             position: fixed;
             bottom: 10px;
@@ -167,6 +236,15 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
 </head>
 <body>
     <div id="map"></div>
+    <div id="legend">
+        <h3>{title or "iNaturalist observations"}</h3>
+        <div class="legend-row"><span>Observations</span><span>{total_observations}</span></div>
+        <div class="legend-row"><span>Contributors</span><span>{unique_contributors}</span></div>
+        <div class="legend-row"><span>Unique taxa</span><span>{unique_taxa}</span></div>
+        <div class="legend-separator"></div>
+        <div class="legend-row"><span>Observed from</span><span>{observed_from or "-"}</span></div>
+        <div class="legend-row"><span>Observed to</span><span>{observed_to or "-"}</span></div>
+    </div>
     <div id="timestamp">{timestamp_str}</div>
     <script>
         var map = L.map('map').setView([48.7, 19.1], 9);
