@@ -52,7 +52,7 @@ def _resolve_geojson(value: str) -> Path:
 # HTML map builder (Leaflet)
 # ---------------------------------------------------------------------------
 
-def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str:
+def build_html_map(df: pd.DataFrame, geojson_data, poly, args, title: str = "") -> str:
     """Build a Leaflet HTML map with observation markers and an optional polygon."""
 
     # Summary statistics shown in the legend metadata panel.
@@ -168,7 +168,7 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
     }}).addTo(map);
 """
 
-    page_title = f"iNaturalist – {title}" if title else "iNaturalist Observations Map"
+    page_title = f"iNaturalist – VSTOP {args.date_from[:4]}" if title else "iNaturalist Observations Map"
     now = _datetime.now()
     timestamp_str = f"Mapa bola naposledy aktualizovaná {now.day:02d}.{now.month:02d}.{now.year} o {now.hour:02d}:{now.minute:02d}"
 
@@ -237,13 +237,13 @@ def build_html_map(df: pd.DataFrame, geojson_data, poly, title: str = "") -> str
 <body>
     <div id="map"></div>
     <div id="legend">
-        <h3>{title or "iNaturalist observations"}</h3>
-        <div class="legend-row"><span>Observations</span><span>{total_observations}</span></div>
-        <div class="legend-row"><span>Contributors</span><span>{unique_contributors}</span></div>
-        <div class="legend-row"><span>Unique taxa</span><span>{unique_taxa}</span></div>
+        <h3>VS TOP {args.date_from[:4] if args.date_from else now.year} - záznamy v iNaturalist</h3>
+        <div class="legend-row"><span>Pozorovania</span><span>{total_observations}</span></div>
+        <div class="legend-row"><span>Prispievatelia</span><span>{unique_contributors}</span></div>
+        <div class="legend-row"><span>Taxóny</span><span>{unique_taxa}</span></div>
         <div class="legend-separator"></div>
-        <div class="legend-row"><span>Observed from</span><span>{observed_from or "-"}</span></div>
-        <div class="legend-row"><span>Observed to</span><span>{observed_to or "-"}</span></div>
+        <div class="legend-row"><span>Od </span><span>{observed_from or "-"}</span></div>
+        <div class="legend-row"><span>Do </span><span>{observed_to or "-"}</span></div>
     </div>
     <div id="timestamp">{timestamp_str}</div>
     <script>
@@ -400,7 +400,7 @@ def main():
     # Build and save HTML
     # ------------------------------------------------------------------
     title = f"{geojson_label}  {args.date_from or ''}–{args.date_to or ''}".strip(" –")
-    html = build_html_map(df, geojson_data, poly, title)
+    html = build_html_map(df, geojson_data, poly, args, title)
 
     try:
         html_path.write_text(html, encoding="utf-8")
